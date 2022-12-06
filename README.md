@@ -15,6 +15,7 @@ python3 qwc.py -t <number of times to run simulation> -p <minimum different of p
 
 ## How it works?
 It will run the simulation a number of times that the -r parameter will indicate. Another parameter is the number of points. If the difference between two teams is bigger than this number in the FIFA ranking, the best one will win. Otherwise the system will randomly select one winner between the two.
+All the results are stored in a SQLite database inside the datastore directory so you can run stats after the simulations runs.
 
 ## Stats on SQLite
 ```sql
