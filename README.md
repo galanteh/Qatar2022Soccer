@@ -10,8 +10,11 @@ pip install --upgrade pip
 
 ## How to run?
 ```
-python3 qwc.py
+python3 qwc.py -t <number of times to run simulation> -p <minimum different of points to determimne a winner>
 ```
+
+## How it works?
+It will run the simulation a number of times that the -r parameter will indicate. Another parameter is the number of points. If the difference between two teams is bigger than this number in the FIFA ranking, the best one will win. Otherwise the system will randomly select one winner between the two.
 
 ## Stats on SQLite
 ```sql
