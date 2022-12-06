@@ -1,6 +1,18 @@
 # Welcome to Qatar2022Soccer project
 Goal of the project is to determine a probable winner of world cup playing with Fifa Ranking of the teams.
 
+## Download & Install
+```
+python3 -m venv .
+pip3 install -r requirements.txt
+pip install --upgrade pip
+```
+
+## How to run?
+```
+python3 qwc.py
+```
+
 ## Stats on SQLite
 ```sql
 SELECT first_place,
