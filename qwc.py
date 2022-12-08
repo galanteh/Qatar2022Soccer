@@ -68,7 +68,6 @@ class QWCProgram():
         parser = argparse.ArgumentParser(epilog=self.welcome_message,
                                          prog=self.exe_name,
                                          description=self.description_message)
-
         parser.add_argument('-r', '--run', nargs=1, default=None, help="Run simulation by a number of times.",
                             dest='times', metavar='TIMES')
         parser.add_argument('-p', '--points', nargs=1, default=None,
@@ -77,6 +76,9 @@ class QWCProgram():
         args = vars(parser.parse_args())
 
         try:
+            if args['times'] is None or args['points'] is None:
+                parser.print_help()
+                sys.exit(1)
             if args['points'][0] is not None:
                 points = int(args['points'][0])
             else:
